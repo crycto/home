@@ -1,13 +1,51 @@
+:root {
+  font-size: 10px;
+  --font1: "Righteous-Regular";
+  --font2: "Montserrat-Regular";
+  --bg-color: rgb(28 29 31);
+  --banner-bg-size: 105rem;
+  --brand-font-size: 14rem;
+  --card-font-size: 10px;
+  /* rgb(10 22 56); */
+}
+@media (max-width: 1024px) {
+  :root {
+    font-size: 9px;
+  }
+}
+@media (max-width: 900px) {
+  :root {
+    font-size: 5px;
+    --brand-font-size: 9rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Righteous-Regular", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  /* color: rgba(255, 255, 255, 0.95); */
+  /* background: #eceef6; */
+  background-color: rgb(20 20 21);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  overflow: scroll;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+a {
+  outline: none !important;
 }
