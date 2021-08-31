@@ -1,21 +1,30 @@
 import "./App.scss";
-import EarlySupport from "./components/EarlySupport";
-import Main from "./components/Main";
+
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import HowToPlay from "./components/HowToPlay";
-import LaunchApp from "./components/LaunchApp";
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Terms from "./components/Terms";
+import Home from "./components/Home";
 
 function App() {
   return (
     <div className="App">
-      <div id="shape" className="shape"></div>
-      <Header />
-      <Main />
-      <HowToPlay />
-      <LaunchApp />
-      <EarlySupport />
-      <Footer />
+      <Router>
+        <Switch>
+          <Route path="/terms">
+            <Header />
+            <Terms />
+            <Footer />
+          </Route>
+          <Route path="/">
+            <div id="shape" className="shape"></div>
+            <Header />
+            <Home />
+            <Footer />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

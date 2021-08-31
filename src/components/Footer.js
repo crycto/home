@@ -2,6 +2,7 @@ import React, { memo, useCallback } from "react";
 
 import OpenInNewIcon from "@material-ui/icons/OpenInNew";
 import polygon from "../assets/polygon.svg";
+import { Link } from "react-router-dom";
 
 const contractAddress = "0x1a4553f";
 const URLS = {
@@ -33,7 +34,9 @@ function Footer() {
           <span className="purple-text">Polygon</span>
         </div>
 
-        <span style={{ marginLeft: "1rem" }}>Terms of service</span>
+        <Link to="/terms" style={{ marginLeft: "1rem" }}>
+          Terms of service
+        </Link>
       </div>
     </div>
   );

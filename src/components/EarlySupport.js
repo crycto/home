@@ -3,8 +3,6 @@ import firebase from "firebase";
 import { firestore } from "../firebase";
 import Web3 from "web3";
 import Spinner from "./Spinner";
-import stadium from "../assets/player.svg";
-import ball from "../assets/shutter1.svg";
 
 const ref = firestore.collection("earlysupport");
 

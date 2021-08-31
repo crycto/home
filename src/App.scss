@@ -16,7 +16,7 @@
   opacity: 0;
   transform: rotate(-45deg);
   animation: slideShape 1.25s ease 0.5s forwards,
-    lightUp 0.5s ease 1.5s forwards;
+    lightUp 0.5s ease 1.65s forwards;
   z-index: -1;
 }
 
@@ -39,6 +39,7 @@
   // transform: scale(3);
   transform: translateX(-10vw);
   animation: fadeIn 0.5s ease 1.5s forwards;
+  animation: fadeIn 0.5s ease 1.5s both;
   img {
     width: 80vh;
   }
@@ -134,6 +135,14 @@
     color: white;
     font-family: var(--font2);
     text-decoration: none;
+  }
+  .header-main-launch {
+    border: 1px solid;
+    color: #ce920d;
+    border-radius: 5px;
+    padding: 1rem;
+    // background: #ce920d;
+    // font-family: var(--font1);
   }
 }
 
@@ -232,7 +241,7 @@
     text-align: center;
     background: #ce920d;
     position: relative;
-    transition: all 100ms ease;
+    transition: all 100ms linear;
     &:hover {
       // transform: translateY(-1px);
       box-shadow: 0 0 20px 3px #ffb100;
@@ -868,7 +877,7 @@
     height: 7.5rem;
     padding: 2rem;
     color: #bb8e2ac2;
-    font-family: "Alegreya Sans", sans-serif;
+    font-family: var(--font1);
     font-size: 2.5rem;
     cursor: pointer;
     text-align: center;
@@ -970,6 +979,10 @@
     width: 1rem;
     margin: 0 5px;
   }
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -998,6 +1011,23 @@
         padding: 10px;
       }
     }
+  }
+}
+
+.terms {
+  overflow-y: scroll;
+  padding: 5rem 2rem;
+
+  font-family: var(--font2);
+  font-size: 13px;
+  color: white;
+  width: 80vw;
+  margin: auto;
+  p {
+    font-size: 1.5rem;
+  }
+  a {
+    color: white;
   }
 }
 

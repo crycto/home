@@ -2,7 +2,6 @@ import React from "react";
 import metamask from "../assets/metamask.svg";
 import blockchain from "../assets/blockchain.svg";
 import polygon from "../assets/polygon.svg";
-import bat from "../assets/stadium.jpg";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import Card from "./Card";
 
