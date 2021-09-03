@@ -4,10 +4,10 @@ import OpenInNewIcon from "@material-ui/icons/OpenInNew";
 import polygon from "../assets/polygon.svg";
 import { Link } from "react-router-dom";
 
-const contractAddress = "0x1a4553f";
+const contractAddress = "0xADA6Fc084d4b1Fd4a15e4A040FD1d8E303EE3Da4";
 const URLS = {
   polygon: "https://polygon.technology/",
-  contract: `https://polygonscan.com/address/${contractAddress}`,
+  contract: `https://polygonscan.com/address/${contractAddress}#code`,
 };
 
 function Footer() {
@@ -24,7 +24,7 @@ function Footer() {
       <div className="right">
         <div onClick={goTo.bind(null, "contract")}>
           Contract &nbsp;
-          <span className="purple-text">
+          <span className="purple-text cp">
             {contractAddress.substr(0, 8)}...
             <OpenInNewIcon fontSize="inherit" />
           </span>

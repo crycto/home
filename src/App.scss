@@ -281,7 +281,7 @@
     margin-top: 5rem;
 
     svg {
-      margin-right: 2.5rem;
+      margin-right: 3rem;
       cursor: pointer;
       transition: all 200ms ease;
       color: #d4d4d4;
@@ -874,6 +874,7 @@
   .launch-btn-big-inner {
     background: transparent;
     width: 20vw;
+    min-width: 150px;
     height: 7.5rem;
     padding: 2rem;
     color: #bb8e2ac2;
@@ -1011,6 +1012,10 @@
         padding: 10px;
       }
     }
+    .polygonicon {
+      width: 2rem;
+      margin: 0 5px;
+    }
   }
 }
 
@@ -1106,4 +1111,8 @@
   100% {
     stroke-dashoffset: 900;
   }
+}
+
+.cp {
+  cursor: pointer;
 }

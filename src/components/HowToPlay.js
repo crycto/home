@@ -4,6 +4,7 @@ import blockchain from "../assets/blockchain.svg";
 import polygon from "../assets/polygon.svg";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import Card from "./Card";
+import { analytics } from "../firebase";
 
 function HowToPlay() {
   return (
@@ -19,13 +20,14 @@ function HowToPlay() {
             content="You'd need a crypto wallet like MetaMask to be able to interact with
             the game"
             action="Install MetaMask"
-            handleAction={() =>
+            handleAction={() => {
               window.open(
                 "https://metamask.io/index.html",
                 "_blank",
                 "noopener noreferrer"
-              )
-            }
+              );
+              analytics.logEvent("install_metamask");
+            }}
           />
 
           <Card
@@ -33,13 +35,14 @@ function HowToPlay() {
             title="Polygon Network"
             content="Connect your wallet to Polygon Network (Previously Matic)"
             action="How to configure polygon network ?"
-            handleAction={() =>
+            handleAction={() => {
               window.open(
                 "https://docs.matic.network/docs/develop/metamask/config-polygon-on-metamask/",
                 "_blank",
                 "noopener noreferrer"
-              )
-            }
+              );
+              analytics.logEvent("configure_polygon");
+            }}
           />
 
           <Card

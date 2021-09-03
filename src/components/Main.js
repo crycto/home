@@ -5,14 +5,12 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GithubIcon from "@material-ui/icons/GitHub";
 import player from "../assets/player.svg";
 
-const contractAddress = "0x";
 const URLS = {
-  twitter: "https://www.twitter.com/",
-  instagram: "https://www.instagram.com/",
-  linkedin: "https://www.linkedin.com/",
-  github: "https://github.com/crycto/",
+  twitter: "https://twitter.com/crycto_io",
+  instagram: "https://www.instagram.com/crycto.io",
+  linkedin: "https://www.linkedin.com/company/crycto",
+  github: "https://github.com/crycto/smart-contracts",
   polygon: "https://polygon.technology/",
-  contract: `https://polygonscan.com/address/${contractAddress}`,
 };
 
 const goTo = (name) => {
@@ -36,7 +34,7 @@ function Main() {
             class="launch-btn"
             rel="noreferrer"
           >
-            Launch App
+            Launch Testnet App
           </a>
           {/* <span class="how-to-link" onClick={navigateToHowToSection}>
             How to play ?

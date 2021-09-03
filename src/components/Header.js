@@ -1,11 +1,14 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { analytics } from "../firebase";
 
-const navigateTo = (section) =>
+const navigateTo = (section) => {
   document
     .getElementById(section === 2 ? "early-support-section" : "how-to-section")
     .scrollIntoView({ behavior: "smooth" });
+  analytics.logEvent("section_navigation", { section });
+};
 
 function Header() {
   const location = useLocation();
@@ -24,17 +27,22 @@ function Header() {
             <Link to={{ pathname: "/", hash: "#earlysupport" }}>
               I'm interested
             </Link>
-            <a target="_blank" href="https://mumbai.crycto.io" rel="noreferrer">
+            <a
+              className="header-main-launch"
+              target="_blank"
+              href="https://mumbai.crycto.io"
+              rel="noreferrer"
+            >
               Launch Testnet App
             </a>
-            <a
+            {/* <a
               className="header-main-launch"
               target="_blank"
               href="https://app.crycto.io"
               rel="noreferrer"
             >
               Launch App
-            </a>
+            </a> */}
           </>
         ) : (
           <>
